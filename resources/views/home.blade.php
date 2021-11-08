@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laravel Movies</title>
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
 <body>
     <h1>Laravel Movies</h1>
     <ul>
         @foreach ($data as $movie)
             <li>
+                <span class="film_id">{{$movie['id']}}</span>
                 <h2>{{$movie['title']}}</h2>
                 <p>titolo originale: {{$movie['original_title']}}</p>
                 <p>nazionalità: {{$movie['nationality']}}</p>
